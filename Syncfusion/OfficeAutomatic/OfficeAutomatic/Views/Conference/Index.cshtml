@@ -1,0 +1,92 @@
+﻿@using System.Collections
+@using OfficeAutomatic.Models
+@{
+    ViewData["Mode"] = GridEditMode.Dialog;
+    ViewBag.Title = "会议订约";    
+}
+<script type="text/javascript">
+    function OnRecordDoubleClickEvent(row, record) {
+        var url = '@Url.Action("Schedule", "Schedule")' + "?parentID=" + record.record.ID
+            + "&scheduleType=1";
+        $("#myDialog1").load(url);
+        $("#myDialog1").dialog("open");
+    }
+</script>
+
+<div class="sample-panel-margin" style="width: 100%;">
+    @(Html.Syncfusion().Grid<Conference>("Grid1")
+          .ActionMode(ActionMode.JSON)
+          .Datasource((IEnumerable<Conference>)ViewData["data"])
+          .EnablePaging()
+          .EnableSorting().Width(768)
+          .EnableFiltering()
+          .Caption("会议室")
+            //.EnableGrouping()
+          .Column(column =>
+              {
+                  column.Add(p => p.Code).HeaderText("会议室编码").TextAlign(TextAlignment.Right).Width(90);
+                  column.Add(p => p.Name).HeaderText("会议室名称");
+                  column.Add(p => p.TotalUsers).HeaderText("容纳人数");
+                  column.Add(p => p.Location).HeaderText("位置");
+                  column.Add(p => p.HasProjector).HeaderText("配置投影仪").Width(120);
+              })
+          .ToolBar(tools =>
+              {
+                  tools.Add(GridToolBarItems.AddNew)
+                       .Add(GridToolBarItems.Edit)
+                       .Add(GridToolBarItems.Delete)
+                       .Add(GridToolBarItems.Update)
+                       .Add(GridToolBarItems.Cancel);
+              })
+              .PageSettings(settings =>
+                  {
+                      settings.PageSize(15).PageCount(10);
+                  })
+          .Mappers(mapper =>
+              {
+                  mapper.InsertAction("JSONAdd")
+                      //.SaveAction("JSONSave")
+                        .DeleteAction("JSONDelete");
+              })
+              .ClientSideEvents(ent =>
+                  {
+                      ent.OnRecordDoubleClickEvent("OnRecordDoubleClickEvent");
+                  })
+          .Editing(edit =>
+              {
+                  edit.Dialog(dialog =>
+                      {
+                          if ((GridEditMode)ViewData["Mode"] == GridEditMode.Dialog)
+                          {
+                              dialog.Height(399);
+                              dialog.Width(600);
+                          }
+                          else
+                          {
+                              dialog.Height(365);
+                              dialog.Width(555);
+                          }
+                          dialog.Position(DialogPositions.Center);
+                          dialog.Show(DialogAnimations.clip);
+                          dialog.Hide(DialogAnimations.drop);
+                      });
+                  edit//.AllowEdit(true)
+                      .AllowNew(true)
+                      .AllowDelete(true);
+                  edit.EditMode((GridEditMode)Convert.ToInt32(ViewData["Mode"]));
+                  //edit.DialogModeEditorTemplate("OrderEditorTemplate");
+                  edit.PrimaryKey(key => key.Add(p => p.ID));
+              })
+          .QueryParam("GridMode=" + Convert.ToInt32(ViewData["Mode"])))
+</div>
+
+<script src="@Url.Content("~/Scripts/EditingScript.js")" type="text/javascript"></script>
+
+@(Html.Syncfusion().StyleManager()
+        .Register(stylesheets => stylesheets.Add("~/Content/css/CrudCellEditType.css"))
+      )
+
+<div id="myDialog1" title="@ViewData["Title"]" class="visibleHide">
+</div>
+@Html.Syncfusion().Dialog("myDialog1").AutoOpen(false).MinHeight(630).MinWidth(800)
+

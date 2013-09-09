@@ -1,0 +1,16 @@
+﻿@if (Request.IsAuthenticated)
+{
+    <text>
+    <div style="vertical-align: middle">
+        <label style="margin-top: 5px">Hello,@User.Identity.Name！</label>
+        @Html.ActionLink("退出", "LogOff", "Account", routeValues: null, htmlAttributes: new { id = "logoffLink" })
+    </div>
+    </text>
+}
+else
+{
+    <ul>
+        <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}

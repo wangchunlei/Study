@@ -1,0 +1,47 @@
+﻿@model IEnumerable<OfficeAutomatic.Models.Seminar>
+@{
+    ViewBag.Title = "";
+    Layout = null;
+}
+
+<div id="Target" style="width: 100%;" class="sample-panel-margin">
+    @{ 
+        Html.Syncfusion().Schedule("MySchedule", "ScheduleModel")
+            .DataSource(Model)
+            //.Resources((List<ScheduleResource>)ViewData["resources"])
+            .CurrentView(ScheduleViewMode.WorkWeek)
+            .CurrentDate(DateTime.Now)
+            .Width(768)
+            .Height(580)
+            .StartHour(8)
+            .EndHour(19)
+            .TimeZone(ScheduleTimeZones.Eastern_Standard_Time)
+            //.ShowNavigationPane(true)
+            //.ShowResourceHeader(true)
+            //.AllowMultipleResource(true)
+            .Localize("zh-CN")
+            .BindList(bind =>
+            {
+                bind.IdField("Id");
+                bind.SubjectField("Subject");
+                bind.LocationField("Location");
+                bind.StartTimeField("StartTime");
+                bind.EndTimeField("EndTime");
+                bind.DescriptionField("Description");
+                bind.OwnerField("Owner");
+                bind.PriorityField("Priority");
+                bind.RecurrenceField("Recurrence");
+                bind.RecurrenceTypeField("RecurrenceType");
+                bind.RecurrenceTypeCountField("RecurrenceCount");
+                bind.ReminderField("Reminder");
+                bind.CategorizeField("Categorize");
+                bind.AllDayField("AllDay");
+                bind.RecurrenceStartField("RecurrenceStartDate");
+                bind.RecurrenceEndField("RecurrenceEndDate");
+                bind.RecurrenceRules("RecurrenceRule");
+            })
+           .Render();
+    }
+</div>
+
+

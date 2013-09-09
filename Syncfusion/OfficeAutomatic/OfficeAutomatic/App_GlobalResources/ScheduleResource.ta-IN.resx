@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AllDayEvents" xml:space="preserve">
+    <value>அனைத்து நாள் நிகழ்வுகள்</value>
+  </data>
+  <data name="AM" xml:space="preserve">
+    <value>காலை</value>
+  </data>
+  <data name="AppointmentDelete" xml:space="preserve">
+    <value>நீக்கு</value>
+  </data>
+  <data name="AppointmentDeleteAlert" xml:space="preserve">
+    <value>உறுதியாக நீழல்வுகலை நீகம்செயலம?</value>
+  </data>
+  <data name="AppointmentEndTime" xml:space="preserve">
+    <value>முடியும் நெரம்</value>
+  </data>
+  <data name="AppointmentHighImportance" xml:space="preserve">
+    <value>மீக முகியமன</value>
+  </data>
+  <data name="AppointmentLocation" xml:space="preserve">
+    <value>இடம்</value>
+  </data>
+  <data name="AppointmentLowImportance" xml:space="preserve">
+    <value>முகியமட்ர</value>
+  </data>
+  <data name="AppointmentRecurrence" xml:space="preserve">
+    <value>மறுதரவு</value>
+  </data>
+  <data name="AppointmentReminder" xml:space="preserve">
+    <value>நினைவூட்டு</value>
+  </data>
+  <data name="AppointmentResource" xml:space="preserve">
+    <value>ஆதாரம்</value>
+  </data>
+  <data name="AppointmentStartTime" xml:space="preserve">
+    <value>தொடக்காலம்</value>
+  </data>
+  <data name="AppointmentSubject" xml:space="preserve">
+    <value>பொருள்</value>
+  </data>
+  <data name="AppointmentTimeZones" xml:space="preserve">
+    <value>கால பிரிவு</value>
+  </data>
+  <data name="AppointmentWindow" xml:space="preserve">
+    <value>நியமனம்</value>
+  </data>
+  <data name="ButtonCancel" xml:space="preserve">
+    <value>இரத்துச் செய்</value>
+  </data>
+  <data name="ButtonExport" xml:space="preserve">
+    <value>ஏற்றுமதி</value>
+  </data>
+  <data name="ButtonImport" xml:space="preserve">
+    <value>இறக்குமதி</value>
+  </data>
+  <data name="ButtonOk" xml:space="preserve">
+    <value>சரி</value>
+  </data>
+  <data name="ButtonRemoveRecurrence" xml:space="preserve">
+    <value>மறுதரவு இரத்துச் செய்</value>
+  </data>
+  <data name="Categorize" xml:space="preserve">
+    <value>வகைகள்</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>நாள்</value>
+  </data>
+  <data name="DaycellTooltip" xml:space="preserve">
+    <value>Double click to add appointment</value>
+  </data>
+  <data name="Effective" xml:space="preserve">
+    <value>செயலூக்கம்</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>முதல்</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>மணி</value>
+  </data>
+  <data name="MandatoryProperTimeAlert" xml:space="preserve">
+    <value>Enter Proper Time</value>
+  </data>
+  <data name="MandatoryRecurrenceCountAlert" xml:space="preserve">
+    <value>Enter Recurrence Count</value>
+  </data>
+  <data name="MandatorySubjectAlert" xml:space="preserve">
+    <value>Enter Subject</value>
+  </data>
+  <data name="Minutes" xml:space="preserve">
+    <value>நிமிடங்கள்</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>மாதம்</value>
+  </data>
+  <data name="MonthcellTooltip" xml:space="preserve">
+    <value>Double click to add</value>
+  </data>
+  <data name="MustSelectAppointmentAlert" xml:space="preserve">
+    <value>Select Appointment to snooze their Reminder</value>
+  </data>
+  <data name="MustSelectReminderAlert" xml:space="preserve">
+    <value>Select Reminder Value to snooze their Reminder</value>
+  </data>
+  <data name="NextReminderTime" xml:space="preserve">
+    <value>Click snooze to be reminded again in</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>இல்லை</value>
+  </data>
+  <data name="Occursevery" xml:space="preserve">
+    <value>ஒவ்வொரு ஏற்படும்</value>
+  </data>
+  <data name="PM" xml:space="preserve">
+    <value>மாலை</value>
+  </data>
+  <data name="ProperDataAlert" xml:space="preserve">
+    <value>Enter Proper Data</value>
+  </data>
+  <data name="RecurrenceDaily" xml:space="preserve">
+    <value>தினசரி</value>
+  </data>
+  <data name="RecurrenceDeleteAlert" xml:space="preserve">
+    <value>This is Recurrence Appointment, Are you sure you want to delete this appointment?</value>
+  </data>
+  <data name="RecurrenceDuration" xml:space="preserve">
+    <value>நியமனம் கால அளவு</value>
+  </data>
+  <data name="RecurrenceEnd" xml:space="preserve">
+    <value>முடிவு</value>
+  </data>
+  <data name="RecurrenceEndby" xml:space="preserve">
+    <value>முடிவு பொழுது</value>
+  </data>
+  <data name="RecurrenceMonthly" xml:space="preserve">
+    <value>மாதந்தோரும்</value>
+  </data>
+  <data name="RecurrencePattern" xml:space="preserve">
+    <value>மறுதரவு அமைவு</value>
+  </data>
+  <data name="RecurrenceRange" xml:space="preserve">
+    <value>மறுதரவு தொடர்</value>
+  </data>
+  <data name="RecurrenceStart" xml:space="preserve">
+    <value>ஆரம்பம்</value>
+  </data>
+  <data name="RecurrenceWeekly" xml:space="preserve">
+    <value>வாரந்தோறும்</value>
+  </data>
+  <data name="RecurrenceWindow" xml:space="preserve">
+    <value>மறுதரவு</value>
+  </data>
+  <data name="RecurrenceYearly" xml:space="preserve">
+    <value>ஆண்டுதோறும்</value>
+  </data>
+  <data name="ReminderDismiss" xml:space="preserve">
+    <value>அகற்றுதல்</value>
+  </data>
+  <data name="ReminderDismissAll" xml:space="preserve">
+    <value>முற்றிலும் அகற்றுதல்</value>
+  </data>
+  <data name="ReminderOpenItem" xml:space="preserve">
+    <value>திறந்த</value>
+  </data>
+  <data name="ReminderSnooze" xml:space="preserve">
+    <value>கருத்தில்லாமல்</value>
+  </data>
+  <data name="ReminderWindow" xml:space="preserve">
+    <value>நினைவூட்டு</value>
+  </data>
+  <data name="Resource" xml:space="preserve">
+    <value>ஆதாரம்</value>
+  </data>
+  <data name="SaveAndClose" xml:space="preserve">
+    <value>சேமி &amp; மூடு</value>
+  </data>
+  <data name="SelectAppointmentAlert" xml:space="preserve">
+    <value>Select Appointment to show their details</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>வரை</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>இன்று</value>
+  </data>
+  <data name="Until" xml:space="preserve">
+    <value>வரைக்கும்</value>
+  </data>
+  <data name="Week" xml:space="preserve">
+    <value>வாரம்</value>
+  </data>
+  <data name="Workweek" xml:space="preserve">
+    <value>வேலை வாரம்</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>ஆண்டு</value>
+  </data>
+  <data name="Every" xml:space="preserve">
+    <value>ஒவ்வொரு</value>
+  </data>
+  <data name="BlueCategorize" xml:space="preserve">
+    <value>Blue Categorize</value>
+  </data>
+  <data name="GreenCategorize" xml:space="preserve">
+    <value>Green Categorize</value>
+  </data>
+  <data name="OrangeCategorize" xml:space="preserve">
+    <value>Orange Categorize</value>
+  </data>
+  <data name="PurpleCategorize" xml:space="preserve">
+    <value>Purple Categorize</value>
+  </data>
+  <data name="RedCategorize" xml:space="preserve">
+    <value>Red Categorize</value>
+  </data>
+  <data name="YellowCategorize" xml:space="preserve">
+    <value>Yellow Categorize</value>
+  </data>
+  <data name="Invaliddatemessage" xml:space="preserve">
+    <value>நீங்கள் தேதி மற்றும் / அல்லது நேரம் குறிப்பிட வேண்டும். அவர்கள் சரியான தேதி மற்றும் / அல்லது நேரம் பிரதிநிதித்துவம் சரிபார்க்க இந்த உரையாடல் பெட்டியில் உங்கள் பதிவுகளை சரிபார்க்க.</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="DayNames" xml:space="preserve">
+    <value>Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday</value>
+  </data>
+  <data name="DeleteConfirmTitle" xml:space="preserve">
+    <value>Confirm Delete</value>
+  </data>
+  <data name="DeleteOccurrence" xml:space="preserve">
+    <value>Delete this occurrence.</value>
+  </data>
+  <data name="DeleteSeries" xml:space="preserve">
+    <value>Delete the series.</value>
+  </data>
+  <data name="GoToDate" xml:space="preserve">
+    <value>Go To Date</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="NextAppointment" xml:space="preserve">
+    <value>Next Appointment</value>
+  </data>
+  <data name="NoEndDate" xml:space="preserve">
+    <value>No end date</value>
+  </data>
+  <data name="Occurrences" xml:space="preserve">
+    <value>occurrences</value>
+  </data>
+  <data name="Occurs" xml:space="preserve">
+    <value>Occurs</value>
+  </data>
+  <data name="Of" xml:space="preserve">
+    <value>of</value>
+  </data>
+  <data name="On" xml:space="preserve">
+    <value>on</value>
+  </data>
+  <data name="OpenConfirmTitle" xml:space="preserve">
+    <value>Open Recurring Item</value>
+  </data>
+  <data name="OpenOccurrence" xml:space="preserve">
+    <value>Open this occurrence.</value>
+  </data>
+  <data name="OpenSeries" xml:space="preserve">
+    <value>Open the series.</value>
+  </data>
+  <data name="OrangeCategorize1" xml:space="preserve">
+    <value>Orange Kategorisieren</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Prev</value>
+  </data>
+  <data name="PreviousAppointment" xml:space="preserve">
+    <value>Previous Appointment</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="Recurrence" xml:space="preserve">
+    <value>Recurrence</value>
+  </data>
+  <data name="RecurrenceEvery" xml:space="preserve">
+    <value>Every</value>
+  </data>
+  <data name="ShowIn" xml:space="preserve">
+    <value>Show in: </value>
+  </data>
+  <data name="The" xml:space="preserve">
+    <value>The</value>
+  </data>
+  <data name="WeekCounts" xml:space="preserve">
+    <value>First,Second,Third,Fourth,Last</value>
+  </data>
+  <data name="Weekday" xml:space="preserve">
+    <value>weekday</value>
+  </data>
+  <data name="EndAfter" xml:space="preserve">
+    <value>End after</value>
+  </data>
+  <data name="MonthNames" xml:space="preserve">
+    <value>ஜனவரி, பிப்ரவரி, மார்ச், ஏப்ரல், மே, ஜூன், ஜூலை, ஆகஸ்ட், செப்டம்பர், அக்டோபர், நவம்பர், டிசம்பர்</value>
+  </data>
+</root>

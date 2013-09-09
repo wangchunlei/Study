@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - 自动办公</title>
+
+    <meta name="viewport" content="width=device-width" />
+
+    @Styles.Render("~/Content/css")
+
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+
+    @(Html.Syncfusion().StyleManager().Combine(true).Minify(true)
+        .Register(component =>
+            {
+                component.Add(ComponentType.Grid);
+                component.Add(ComponentType.Chart);
+                component.Add(ComponentType.Schedule);
+
+            }))
+    <script src="@Url.Content("~/Scripts/MicrosoftAjax.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/MicrosoftMvcAjax.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/SampleScript.js")" type="text/javascript"></script>
+</head>
+<body>
+    <div id="page">
+        <div class="pt-header">
+            <div class="banner">
+                <div class="ourlogo">
+                    <span class="logo">自动办公系统1.0</span>
+                </div>
+                <div class="ourmenu" id="menucontainer">
+                    <ul id="menu">
+                        <li>@Html.ActionLink("主页", "Index", "Home")</li>
+                        <li>@Html.ActionLink("关于", "About", "Home")</li>
+                        <li>@Html.ActionLink("联系我们", "Contact", "Home")</li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="loginpage">
+            <section id="login">
+                @Html.Partial("_LoginPartial")
+            </section>
+        </div>
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+
+        @* <div id="footer">
+            <div class="global-links">
+                <div class="left">
+                    <div class="ourmenu">
+                        <ul id="menuFooter">
+                            <li>@Html.ActionLink("主页", "Index", "Home")</li>
+                            <li>@Html.ActionLink("关于", "About", "Home")</li>
+                            <li>@Html.ActionLink("联系我们", "Contact", "Home")</li>
+                        </ul>
+
+
+                    </div>
+                </div>
+                <div class="right">
+                    <ul id="social" style="margin: 0px;">
+                        <li><a href="https://www.facebook.com/Syncfusion" class="facebook">Facebook</a></li>
+                        <li><a href="http://twitter.com/#!/Syncfusion" class="twitter">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>*@
+
+    </div>
+    @RenderSection("scripts", required: false)
+
+    @{Html.Syncfusion().ScriptManager().Combine(true).Minify(true).Render();}
+
+    <script type="text/javascript">
+        $(function () {
+            $('#page').css("min-height", $(document).height());
+        });
+    </script>
+</body>
+</html>

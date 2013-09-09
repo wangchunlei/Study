@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@section featured {
+    @*<div  class="rotate">
+       <ul id="rotat" style="visibility:hidden">
+ <li>
+  <div class="Imgleft">
+  <img src='@Url.Content("~/Images/Estudio.png")'  width="930" height="299"/></div>
+   </li>
+       <li>
+  <div class="Imgleft">
+      <img src='@Url.Content("~/Images/orubase.png")' width="930" height="299"/>
+  </div>
+      <div class="ImgRightText">
+                Develop native mobile applications for <b>iOS</b>, <b>Android</b> and <b>Windows Phone</b> using ASP.NET MVC
+ </div>    
+    </li>
+</ul>     
+            
+       @{
+      Html.Syncfusion().Rotator("rotat").FrameSpace(0).StartFrom(1)
+.Orientation(RotatorModel.RotatorOrientation.Horizontal)
+.NavigationType(RotatorNavigatingType.BannerMode).Direction(ScrollDirection.Left)
+.Height(360).Width(1400)
+.VisibleItems(1).Circular(true).ScrollIncrement(1).ScrollInterval(1000).ItemHeight(380).ItemWidth(1370)
+.AnimationSpeed(400)
+//.PageSetting(p => p.PageCount(4) .PagerStyle(PagerStyles.Numeric)     .SliderSize(100))
+.BannerSetting(b=>b.BannerImgCount(2).BannerStyle(BannerStyles.Button))
+//.BannerSetting(b => b.BannerImgCount(7).BannerStyle(BannerStyles.Slider).BannerSliderSize(100))
+.AutoFormat(Syncfusion.Mvc.Shared.Skins.Marble)
+.Render();
+    }
+
+</div>*@
+}
+
+<section class="features">
+    <section class="feature">
+        <img src='@Url.Content("~/Images/samples.png")' alt="" />
+        <p>
+            <ul>
+                <li><a href="@Url.Action("index", "Conference")">会议室订阅</a></li>
+                <li>车辆订阅</li>
+                <li>年假查询</li>
+            </ul>
+        </p>
+    </section>
+    <section class="feature">
+        <img src='@Url.Content("~/Images/document.png")' alt="" />
+        <h3>领导公告</h3>
+    </section>
+    <section class="feature">
+        <img src='@Url.Content("~/Images/support.png")' alt="" />
+        <h3>个人日程</h3>
+    </section>
+</section>

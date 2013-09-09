@@ -1,0 +1,45 @@
+﻿.editor-label, .editor-field
+{
+    margin-top: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+.editor-field > input
+{
+    width:150px !important;
+}
+.tablediv
+{
+    display: table;
+    width: 100%;
+}
+.celldiv
+{
+    float: left; /*fix for  buggy browsers*/
+    display: table-cell;
+    padding: 5px 0px 5px 0px;
+    width: 42%;
+    height: 20px;
+}
+.rowdiv
+{
+    display: table-row;
+    width: auto;
+}
+.EditForm input[type=button]
+{
+    background-color: #FFFFFF;
+    border-color: #DDDDDD;
+    border-style: outset;
+    border-width: 2px;
+    color: #333333;
+}
+.ui-dialog .EditForm p
+{
+    padding-left:0 !important;
+}
+
+#GridMode
+{
+    width:100px;
+}

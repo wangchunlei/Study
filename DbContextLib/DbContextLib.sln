@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbContextLib", "DbContextLib\DbContextLib.csproj", "{9270A0B5-DCD1-4B64-B4B6-0D933F40A4B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbContextConsole", "DbContextConsole\DbContextConsole.csproj", "{1D749170-0DED-4090-A218-8D6974E5F0FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9270A0B5-DCD1-4B64-B4B6-0D933F40A4B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9270A0B5-DCD1-4B64-B4B6-0D933F40A4B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9270A0B5-DCD1-4B64-B4B6-0D933F40A4B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9270A0B5-DCD1-4B64-B4B6-0D933F40A4B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D749170-0DED-4090-A218-8D6974E5F0FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D749170-0DED-4090-A218-8D6974E5F0FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D749170-0DED-4090-A218-8D6974E5F0FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D749170-0DED-4090-A218-8D6974E5F0FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
