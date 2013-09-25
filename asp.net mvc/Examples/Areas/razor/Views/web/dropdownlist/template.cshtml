@@ -1,0 +1,58 @@
+
+<div class="demo-section">
+    <h2>Customers</h2>
+    @(Html.Kendo().DropDownList()
+          .Name("customers")
+          .HtmlAttributes(new { style = "width: 400px" })
+          .DataTextField("ContactName")
+          .DataValueField("CustomerID")
+          .DataSource(source =>
+          {
+              source.Read(read =>
+              {
+                  read.Action("GetCustomers", "Home");
+              });
+          })
+          .Height(300)
+          .Template("<img src=\"" + Url.Content("~/Content/web/Customers/") +  "${data.CustomerID}.jpg\" alt=\"${data.CustomerID}\" />" +
+                            "<dl>" +
+                                "<dt>Contact:</dt><dd>${ data.ContactName }</dd>" +
+                                "<dt>Company:</dt><dd>${ data.CompanyName }</dd>" +
+                            "</dl>")
+    )
+</div>
+<div class="demo-section">
+    <h2>Information</h2>
+    <p>
+        Open the DropDownList to see the customized appearance of the items.
+    </p>
+</div>
+
+<style scoped>
+    .demo-section {
+        width: 400px;
+        padding: 30px;
+    }
+    .demo-section h2 {
+        text-transform: uppercase;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+    #titles-list .k-item {
+        overflow: hidden; /* clear floated images */
+    }
+    #titles-list img {
+        -moz-box-shadow: 0 0 2px rgba(0,0,0,.4);
+        -webkit-box-shadow: 0 0 2px rgba(0,0,0,.4);
+        box-shadow: 0 0 2px rgba(0,0,0,.4);
+        float: left;
+        margin: 5px 20px 5px 0;
+    }
+    #titles-list h3 {
+        margin: 30px 0 10px 0;
+        font-size: 2em;
+    }
+    #titles-list p {
+        margin: 0;
+    }
+</style>

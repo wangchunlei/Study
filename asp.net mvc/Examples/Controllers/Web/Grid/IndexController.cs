@@ -1,0 +1,88 @@
+﻿﻿using System.Collections.Generic;
+using System.Data.Linq;
+using System.Linq;
+using System.Web.Mvc;
+using Domas.Web.Mvc.Examples.Models;
+using Domas.Web.Mvc.Extensions;
+using Domas.Web.Mvc.UI;
+using System;
+
+namespace Domas.Web.Mvc.Examples.Controllers
+{
+    public partial class GridController : Controller
+    {
+        public ActionResult Index()
+        {
+            return View(GetProducts());
+        }
+
+        public ActionResult Products_Read([DataSourceRequest] DataSourceRequest request)
+        {
+            return Json(GetProducts().ToDataSourceResult(request));
+        }
+
+        public ActionResult Orders_Read([DataSourceRequest]DataSourceRequest request)
+        {
+            return Json(GetOrders().ToDataSourceResult(request));
+        }
+
+        private static IEnumerable<OrderViewModel> GetOrders()
+        {
+            var northwind = new NorthwindDataContext();
+
+            var loadOptions = new DataLoadOptions();
+
+            loadOptions.LoadWith<Order>(o => o.Customer);
+            northwind.LoadOptions = loadOptions;
+
+            return northwind.Orders.Select(order => new OrderViewModel
+            {
+                ContactName = order.Customer.ContactName,
+                Freight = order.Freight,
+                OrderDate = order.OrderDate,
+                ShippedDate = order.ShippedDate,
+                OrderID = order.OrderID,
+                ShipAddress = order.ShipAddress,
+                ShipCountry = order.ShipCountry,
+                ShipName = order.ShipName,
+                ShipCity = order.ShipCity,               
+                EmployeeID = order.EmployeeID,
+                CustomerID = order.CustomerID
+            });
+        }
+
+        private static IEnumerable<ProductViewModel> GetProducts()
+        {
+            var northwind = new NorthwindDataContext();
+
+            return northwind.Products.Select(product => new ProductViewModel
+            {
+                ProductID = product.ProductID,
+                ProductName = product.ProductName,
+                UnitPrice = product.UnitPrice ?? 0,
+                UnitsInStock = product.UnitsInStock ?? 0,
+                UnitsOnOrder = product.UnitsOnOrder ?? 0,
+                Discontinued = product.Discontinued,
+                LastSupply = DateTime.Today
+            });
+        }
+
+        private static IEnumerable<EmployeeViewModel> GetEmployees()
+        {
+            var northwind = new NorthwindDataContext();
+
+            return northwind.Employees.Select(employee => new EmployeeViewModel
+            {
+                EmployeeID = employee.EmployeeID,
+                FirstName = employee.FirstName,
+                LastName = employee.LastName,
+                Country = employee.Country,
+                City = employee.City,
+                Notes = employee.Notes,
+                Title = employee.Title,
+                Address = employee.Address,
+                HomePhone = employee.HomePhone
+            });
+        }
+    }
+}

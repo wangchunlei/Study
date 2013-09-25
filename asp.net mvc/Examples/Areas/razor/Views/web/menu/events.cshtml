@@ -1,0 +1,89 @@
+﻿<div class="demo-section">
+    @(Html.Kendo().Menu()
+        .Name("menu")
+        .Items(items =>
+        {
+            items.Add()
+                .Text("First Item")
+                .Items(children =>
+                {
+                    children.Add().Text("Sub Item 1");
+                    children.Add().Text("Sub Item 2");
+                    children.Add().Text("Sub Item 3");
+                    children.Add().Text("Sub Item 4");
+                    children.Add().Text("Sub Item 5");
+                });
+
+            items.Add()
+                 .Text("Second Item")
+                 .Items(children =>
+                 {
+                     children.Add().Text("Sub Item 1");
+                     children.Add().Text("Sub Item 2");
+                     children.Add().Text("Sub Item 3");
+                     children.Add().Text("Sub Item 4");
+                     children.Add().Text("Sub Item 5");
+                 });
+
+            items.Add()
+                .Text("Third Item")
+                .Items(children =>
+                {
+                    children.Add().Text("Sub Item 1");
+                    children.Add().Text("Sub Item 2");
+                    children.Add().Text("Sub Item 3");
+                    children.Add().Text("Sub Item 4");
+                    children.Add().Text("Sub Item 5");
+                });
+
+            items.Add()
+                 .Text("Fourth Item")
+                 .Items(children =>
+                 {
+                     children.Add().Text("Sub Item 1");
+                     children.Add().Text("Sub Item 2");
+                     children.Add().Text("Sub Item 3");
+                     children.Add().Text("Sub Item 4");
+                     children.Add().Text("Sub Item 5");
+                 });
+
+            items.Add()
+                .Text("Fifth Item")
+                .Items(children =>
+                {
+                    children.Add().Text("Sub Item 1");
+                    children.Add().Text("Sub Item 2");
+                    children.Add().Text("Sub Item 3");
+                    children.Add().Text("Sub Item 4");
+                    children.Add().Text("Sub Item 5");
+                });
+        })
+        .Events(e => e.Open("open").Close("close").Select("select").Activate("activate").Deactivate("deactivate"))
+    )
+</div>
+<div class="demo-section">
+    <h3 class="title">Console log
+    </h3>
+    <div class="console"></div>
+</div>
+<script>
+    function open(e) {
+        kendoConsole.log("Opened: " + $(e.item).children(".k-link").text());
+    }
+
+    function close(e) {
+        kendoConsole.log("Closed: " + $(e.item).children(".k-link").text());
+    }
+
+    function select(e) {
+        kendoConsole.log("Selected: " + $(e.item).children(".k-link").text());
+    }
+
+    function activate(e) {
+        kendoConsole.log("Activated: " + $(e.item).children(".k-link").text());
+    }
+
+    function deactivate(e) {
+        kendoConsole.log("Deactivated: " + $(e.item).children(".k-link").text());
+    }
+</script>
