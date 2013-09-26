@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.20827.3
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domas.Web.Mvc", "Domas.Web.Mvc\Domas.Web.Mvc.csproj", "{A7F7C110-D7F0-49B7-8DDA-FD2D1CC6F3B1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kendo.Mvc.Examples", "Examples\Kendo.Mvc.Examples.csproj", "{98DE3BD7-E6ED-4900-A505-810EDE765CA7}"

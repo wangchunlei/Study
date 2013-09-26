@@ -19,13 +19,13 @@ using System.Xml.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
-[assembly: EdmRelationshipAttribute("SchedulerModels", "FK_MeetingAtendee_Meeting", "Meetings", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Domas.Web.Mvc.Examples.Models.Scheduler.Meeting), "MeetingAtendees", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Domas.Web.Mvc.Examples.Models.Scheduler.MeetingAtendee), true)]
-[assembly: EdmRelationshipAttribute("SchedulerModels", "FK_Meetings_Meetings", "Meetings", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Domas.Web.Mvc.Examples.Models.Scheduler.Meeting), "Meetings1", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Domas.Web.Mvc.Examples.Models.Scheduler.Meeting), true)]
-[assembly: EdmRelationshipAttribute("SchedulerModels", "FK_Tasks_Tasks", "Tasks", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Domas.Web.Mvc.Examples.Models.Scheduler.Task), "Tasks1", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Domas.Web.Mvc.Examples.Models.Scheduler.Task), true)]
+[assembly: EdmRelationshipAttribute("SchedulerModels", "FK_MeetingAtendee_Meeting", "Meetings", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Kendo.Mvc.Examples.Models.Scheduler.Meeting), "MeetingAtendees", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Kendo.Mvc.Examples.Models.Scheduler.MeetingAtendee), true)]
+[assembly: EdmRelationshipAttribute("SchedulerModels", "FK_Meetings_Meetings", "Meetings", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Kendo.Mvc.Examples.Models.Scheduler.Meeting), "Meetings1", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Kendo.Mvc.Examples.Models.Scheduler.Meeting), true)]
+[assembly: EdmRelationshipAttribute("SchedulerModels", "FK_Tasks_Tasks", "Tasks", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Kendo.Mvc.Examples.Models.Scheduler.Task), "Tasks1", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Kendo.Mvc.Examples.Models.Scheduler.Task), true)]
 
 #endregion
 
-namespace Domas.Web.Mvc.Examples.Models.Scheduler
+namespace Kendo.Mvc.Examples.Models.Scheduler
 {
     #region Contexts
     
