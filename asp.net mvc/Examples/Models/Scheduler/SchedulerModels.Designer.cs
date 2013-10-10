@@ -190,7 +190,7 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -209,7 +209,7 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
                 {
                     OnMeetingIDChanging(value);
                     ReportPropertyChanging("MeetingID");
-                    _MeetingID = StructuralObject.SetValidValue(value);
+                    _MeetingID = StructuralObject.SetValidValue(value, "MeetingID");
                     ReportPropertyChanged("MeetingID");
                     OnMeetingIDChanged();
                 }
@@ -234,7 +234,7 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
             {
                 OnStartChanging(value);
                 ReportPropertyChanging("Start");
-                _Start = StructuralObject.SetValidValue(value);
+                _Start = StructuralObject.SetValidValue(value, "Start");
                 ReportPropertyChanged("Start");
                 OnStartChanged();
             }
@@ -258,7 +258,7 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
             {
                 OnEndChanging(value);
                 ReportPropertyChanging("End");
-                _End = StructuralObject.SetValidValue(value);
+                _End = StructuralObject.SetValidValue(value, "End");
                 ReportPropertyChanged("End");
                 OnEndChanged();
             }
@@ -282,7 +282,7 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
             {
                 OnTitleChanging(value);
                 ReportPropertyChanging("Title");
-                _Title = StructuralObject.SetValidValue(value, false);
+                _Title = StructuralObject.SetValidValue(value, false, "Title");
                 ReportPropertyChanged("Title");
                 OnTitleChanged();
             }
@@ -306,7 +306,7 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
             {
                 OnDescriptionChanging(value);
                 ReportPropertyChanging("Description");
-                _Description = StructuralObject.SetValidValue(value, false);
+                _Description = StructuralObject.SetValidValue(value, false, "Description");
                 ReportPropertyChanged("Description");
                 OnDescriptionChanged();
             }
@@ -330,7 +330,7 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
             {
                 OnRoomIDChanging(value);
                 ReportPropertyChanging("RoomID");
-                _RoomID = StructuralObject.SetValidValue(value);
+                _RoomID = StructuralObject.SetValidValue(value, "RoomID");
                 ReportPropertyChanged("RoomID");
                 OnRoomIDChanged();
             }
@@ -354,7 +354,7 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
             {
                 OnIsAllDayChanging(value);
                 ReportPropertyChanging("IsAllDay");
-                _IsAllDay = StructuralObject.SetValidValue(value);
+                _IsAllDay = StructuralObject.SetValidValue(value, "IsAllDay");
                 ReportPropertyChanged("IsAllDay");
                 OnIsAllDayChanged();
             }
@@ -378,7 +378,7 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
             {
                 OnRecurrenceRuleChanging(value);
                 ReportPropertyChanging("RecurrenceRule");
-                _RecurrenceRule = StructuralObject.SetValidValue(value, true);
+                _RecurrenceRule = StructuralObject.SetValidValue(value, true, "RecurrenceRule");
                 ReportPropertyChanged("RecurrenceRule");
                 OnRecurrenceRuleChanged();
             }
@@ -402,7 +402,7 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
             {
                 OnRecurrenceIDChanging(value);
                 ReportPropertyChanging("RecurrenceID");
-                _RecurrenceID = StructuralObject.SetValidValue(value);
+                _RecurrenceID = StructuralObject.SetValidValue(value, "RecurrenceID");
                 ReportPropertyChanged("RecurrenceID");
                 OnRecurrenceIDChanged();
             }
@@ -426,7 +426,7 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
             {
                 OnRecurrenceExceptionChanging(value);
                 ReportPropertyChanging("RecurrenceException");
-                _RecurrenceException = StructuralObject.SetValidValue(value, true);
+                _RecurrenceException = StructuralObject.SetValidValue(value, true, "RecurrenceException");
                 ReportPropertyChanged("RecurrenceException");
                 OnRecurrenceExceptionChanged();
             }
@@ -450,7 +450,7 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
             {
                 OnStartTimezoneChanging(value);
                 ReportPropertyChanging("StartTimezone");
-                _StartTimezone = StructuralObject.SetValidValue(value, true);
+                _StartTimezone = StructuralObject.SetValidValue(value, true, "StartTimezone");
                 ReportPropertyChanged("StartTimezone");
                 OnStartTimezoneChanged();
             }
@@ -474,7 +474,7 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
             {
                 OnEndTimezoneChanging(value);
                 ReportPropertyChanging("EndTimezone");
-                _EndTimezone = StructuralObject.SetValidValue(value, true);
+                _EndTimezone = StructuralObject.SetValidValue(value, true, "EndTimezone");
                 ReportPropertyChanged("EndTimezone");
                 OnEndTimezoneChanged();
             }
@@ -485,7 +485,6 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -599,7 +598,7 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -618,7 +617,7 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
                 {
                     OnMeetingIDChanging(value);
                     ReportPropertyChanging("MeetingID");
-                    _MeetingID = StructuralObject.SetValidValue(value);
+                    _MeetingID = StructuralObject.SetValidValue(value, "MeetingID");
                     ReportPropertyChanged("MeetingID");
                     OnMeetingIDChanged();
                 }
@@ -645,7 +644,7 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
                 {
                     OnAtendeeIDChanging(value);
                     ReportPropertyChanging("AtendeeID");
-                    _AtendeeID = StructuralObject.SetValidValue(value);
+                    _AtendeeID = StructuralObject.SetValidValue(value, "AtendeeID");
                     ReportPropertyChanged("AtendeeID");
                     OnAtendeeIDChanged();
                 }
@@ -657,7 +656,6 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -733,7 +731,7 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
 
         #endregion
 
-        #region Primitive Properties
+        #region Simple Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -752,7 +750,7 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
                 {
                     OnTaskIDChanging(value);
                     ReportPropertyChanging("TaskID");
-                    _TaskID = StructuralObject.SetValidValue(value);
+                    _TaskID = StructuralObject.SetValidValue(value, "TaskID");
                     ReportPropertyChanged("TaskID");
                     OnTaskIDChanged();
                 }
@@ -777,7 +775,7 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
             {
                 OnStartChanging(value);
                 ReportPropertyChanging("Start");
-                _Start = StructuralObject.SetValidValue(value);
+                _Start = StructuralObject.SetValidValue(value, "Start");
                 ReportPropertyChanged("Start");
                 OnStartChanged();
             }
@@ -801,7 +799,7 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
             {
                 OnEndChanging(value);
                 ReportPropertyChanging("End");
-                _End = StructuralObject.SetValidValue(value);
+                _End = StructuralObject.SetValidValue(value, "End");
                 ReportPropertyChanged("End");
                 OnEndChanged();
             }
@@ -825,7 +823,7 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
             {
                 OnTitleChanging(value);
                 ReportPropertyChanging("Title");
-                _Title = StructuralObject.SetValidValue(value, false);
+                _Title = StructuralObject.SetValidValue(value, false, "Title");
                 ReportPropertyChanged("Title");
                 OnTitleChanged();
             }
@@ -849,7 +847,7 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
             {
                 OnDescriptionChanging(value);
                 ReportPropertyChanging("Description");
-                _Description = StructuralObject.SetValidValue(value, true);
+                _Description = StructuralObject.SetValidValue(value, true, "Description");
                 ReportPropertyChanged("Description");
                 OnDescriptionChanged();
             }
@@ -873,7 +871,7 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
             {
                 OnOwnerIDChanging(value);
                 ReportPropertyChanging("OwnerID");
-                _OwnerID = StructuralObject.SetValidValue(value);
+                _OwnerID = StructuralObject.SetValidValue(value, "OwnerID");
                 ReportPropertyChanged("OwnerID");
                 OnOwnerIDChanged();
             }
@@ -897,7 +895,7 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
             {
                 OnIsAllDayChanging(value);
                 ReportPropertyChanging("IsAllDay");
-                _IsAllDay = StructuralObject.SetValidValue(value);
+                _IsAllDay = StructuralObject.SetValidValue(value, "IsAllDay");
                 ReportPropertyChanged("IsAllDay");
                 OnIsAllDayChanged();
             }
@@ -921,7 +919,7 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
             {
                 OnRecurrenceRuleChanging(value);
                 ReportPropertyChanging("RecurrenceRule");
-                _RecurrenceRule = StructuralObject.SetValidValue(value, true);
+                _RecurrenceRule = StructuralObject.SetValidValue(value, true, "RecurrenceRule");
                 ReportPropertyChanged("RecurrenceRule");
                 OnRecurrenceRuleChanged();
             }
@@ -945,7 +943,7 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
             {
                 OnRecurrenceIDChanging(value);
                 ReportPropertyChanging("RecurrenceID");
-                _RecurrenceID = StructuralObject.SetValidValue(value);
+                _RecurrenceID = StructuralObject.SetValidValue(value, "RecurrenceID");
                 ReportPropertyChanged("RecurrenceID");
                 OnRecurrenceIDChanged();
             }
@@ -969,7 +967,7 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
             {
                 OnRecurrenceExceptionChanging(value);
                 ReportPropertyChanging("RecurrenceException");
-                _RecurrenceException = StructuralObject.SetValidValue(value, true);
+                _RecurrenceException = StructuralObject.SetValidValue(value, true, "RecurrenceException");
                 ReportPropertyChanged("RecurrenceException");
                 OnRecurrenceExceptionChanged();
             }
@@ -993,7 +991,7 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
             {
                 OnStartTimezoneChanging(value);
                 ReportPropertyChanging("StartTimezone");
-                _StartTimezone = StructuralObject.SetValidValue(value, true);
+                _StartTimezone = StructuralObject.SetValidValue(value, true, "StartTimezone");
                 ReportPropertyChanged("StartTimezone");
                 OnStartTimezoneChanged();
             }
@@ -1017,7 +1015,7 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
             {
                 OnEndTimezoneChanging(value);
                 ReportPropertyChanging("EndTimezone");
-                _EndTimezone = StructuralObject.SetValidValue(value, true);
+                _EndTimezone = StructuralObject.SetValidValue(value, true, "EndTimezone");
                 ReportPropertyChanged("EndTimezone");
                 OnEndTimezoneChanged();
             }
@@ -1028,7 +1026,6 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
 
         #endregion
 
-    
         #region Navigation Properties
     
         /// <summary>
@@ -1097,5 +1094,4 @@ namespace Domas.Web.Mvc.Examples.Models.Scheduler
 
     #endregion
 
-    
 }

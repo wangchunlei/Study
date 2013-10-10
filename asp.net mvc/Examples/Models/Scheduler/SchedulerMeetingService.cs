@@ -5,6 +5,7 @@
     using Domas.Web.Mvc.UI;
     using System.Data;
     using System;
+    using Domas.Web.Mvc.Examples.Models.Scheduler;
 
     public class SchedulerMeetingService : ISchedulerEventService<MeetingViewModel>
     {
