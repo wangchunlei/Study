@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Kendo.Mvc.Examples.Models
+namespace Domas.Web.Mvc.Examples.Models
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;

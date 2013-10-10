@@ -991,12 +991,6 @@
     <Content Include="Areas\razor\Views\web\slider\index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Domas.Web.Mvc\Domas.Web.Mvc.csproj">
-      <Project>{a7f7c110-d7f0-49b7-8dda-fd2d1cc6f3b1}</Project>
-      <Name>Domas.Web.Mvc</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Areas\razor\Views\Shared\_DataVizLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -1332,6 +1326,12 @@
     <None Include="Models\Weather.dbml.layout">
       <DependentUpon>Weather.dbml</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domas.Web.Mvc\Domas.Web.Mvc.csproj">
+      <Project>{a7f7c110-d7f0-49b7-8dda-fd2d1cc6f3b1}</Project>
+      <Name>Domas.Web.Mvc</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
