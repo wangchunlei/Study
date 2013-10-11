@@ -15,10 +15,5 @@ namespace MvcTest.Controllers
         {
             return View();
         }
-
-        public ActionResult Scheduler()
-        {
-            return View();
-        }
     }
 }

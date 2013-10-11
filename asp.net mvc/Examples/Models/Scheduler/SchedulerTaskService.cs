@@ -9,7 +9,7 @@
     public class SchedulerTaskService : ISchedulerEventService<TaskViewModel>
     {
 
-        private SchedulerEntities db;
+        private Domas.Web.Mvc.Examples.Models.Scheduler.SchedulerEntities db;
 
         public SchedulerTaskService(SchedulerEntities context)
         {

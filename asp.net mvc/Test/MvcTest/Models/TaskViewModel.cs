@@ -47,5 +47,13 @@ namespace MvcTest.Models
         public string RecurrenceException { get; set; }
         public bool IsAllDay { get; set; }
         public int? OwnerID { get; set; }
+
+        public Task ToEntity()
+        {
+            return new Task
+            {
+                
+            };
+        }
     }
 }
