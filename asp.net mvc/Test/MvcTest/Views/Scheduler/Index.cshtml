@@ -11,11 +11,24 @@
     .Height(600)
     .Views(views =>
     {
-        views.DayView();
-        views.WeekView(weekView => weekView.Selected(true));
-        views.MonthView();
+        //views.DayView();
+        //views.WeekView(weekView => weekView.Selected(true));
+        views.MonthView(m => m.Selected(true));
         views.AgendaView();
     })
+        .Resources(resource =>
+        {
+            resource.Add(m => m.OwnerID)
+                .Title("Owner")
+                .DataTextField("Text")
+                .DataValueField("Value")
+                .DataColorField("Color")
+                .BindTo(new[] { 
+                new { Text = "Alex", Value = 1, Color = "#f8a398" } ,
+                new { Text = "Bob", Value = 2, Color = "#51a0ed" } ,
+                new { Text = "Charlie", Value = 3, Color = "#56ca85" } 
+            });
+        })
     .DataSource(d => d
         .Model(m =>
         {
